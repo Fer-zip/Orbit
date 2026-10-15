@@ -1,0 +1,88 @@
+{
+  "expo": {
+    "name": "Orbit",
+    "slug": "orbit",
+    "version": "1.0.6",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "mobileapp",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "icon": "./assets/expo.icon"
+    },
+    "android": {
+      "versionCode": 7,
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "backgroundImage": "./assets/images/android-icon-background.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "USE_FULL_SCREEN_INTENT",
+        "WAKE_LOCK",
+        "SCHEDULE_EXACT_ALARM",
+        "USE_EXACT_ALARM",
+        "VIBRATE",
+        "RECEIVE_BOOT_COMPLETED"
+      ],
+      "package": "com.jeanpiere01steam.orbit"
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#208AEF",
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 76
+        }
+      ],
+      "@react-native-community/datetimepicker",
+      "expo-notifications",
+      [
+        "react-native-android-widget",
+        {
+          "widgets": [
+            {
+              "name": "OrbitFocusWidget",
+              "label": "Orbit: Enfoque",
+              "minWidth": "250dp",
+              "minHeight": "110dp",
+              "description": "Controla el Modo Enfoque desde inicio"
+            },
+            {
+              "name": "OrbitCalendarWidget",
+              "label": "Orbit: Agenda Diaria",
+              "minWidth": "250dp",
+              "minHeight": "110dp",
+              "description": "Tus tareas y eventos de hoy"
+            },
+            {
+              "name": "OrbitQuickAddWidget",
+              "label": "Orbit: Añadir Rápido",
+              "minWidth": "110dp",
+              "minHeight": "40dp",
+              "description": "Atajo para crear tareas o gastos"
+            }
+          ]
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "e01eacc8-dade-40fd-8d8a-1e5b66ac5579"
+      }
+    },
+    "owner": "jeanpiere01s-team"
+  }
+}
